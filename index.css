@@ -1,0 +1,54 @@
+body { margin: 0;
+       padding: 0;
+       color: #3b3b3b;
+       font-family: -apple-system, system-ui, BlinkMacSystemFont, Helvetica, Arial, sans-serif;
+       font-size: 18px;
+       text-rendering: optimizeLegibility; }
+
+body.index { width: 100vw;
+             height: 100vh; }
+
+a:link, a:visited { color: #ababab;
+                    font-size: 0.9rem;
+                    font-variant: small-caps;
+                    text-decoration: none;
+                    text-transform: lowercase; }
+
+a:hover { color: #606060;
+          background-color: #fff200;
+          text-decoration: none; }
+
+.index .flexbox { display: flex;
+                  width: 100%; }
+
+.index .flexbox.main { align-items: stretch;
+                       height: 80.9%; }
+
+@media (min-width: 768px) { .index .flexbox.main { align-items: center; } }
+
+.index .flexbox.colors { height: 19.1%; }
+
+@media (min-width: 768px) { .index .flexbox.main, .index .flexbox.colors { height: 50%; } }
+
+.index .flexbox.colors div { width: 50%; height: 100%; }
+
+.index .about { margin: 0 auto;
+                overflow: auto;
+                padding: 1rem 1rem 0 1rem;
+                background: #fff; }
+
+@media (min-width: 768px) { .index .about { padding: 0; width: 90%; } }
+
+.index .about h1 { margin: 0 0 0.75rem;
+                   font-size: 2.5rem; }
+
+.index .about p { font-size: 1rem; }
+
+.index .about ul { margin: 0.5rem 0 0 0;
+                   padding: 0;
+                   list-style-type: none; }
+
+.index .about li, .index .about small { line-height: 1.5rem; }
+
+.index .colors :first-child { background: #ababab; }
+.index .colors :last-child { background: #606060; }

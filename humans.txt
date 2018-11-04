@@ -1,0 +1,15 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+
+    Laurent Boileau - @laurentboileau
+
+# THANKS
+
+    Design inspired by the artwork to Ryuichi Sakamoto and Alva Noto's Virus Series. See https://en.wikipedia.org/wiki/Vrioon.
+
+# TECHNOLOGY COLOPHON
+
+    HTML5, CSS3
+    GitHub Pages - https://pages.github.com
