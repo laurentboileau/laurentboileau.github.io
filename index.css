@@ -1,27 +1,36 @@
+:root { --text-color: #3b3b3b;
+        --main-color: #fff;
+        --weak-color: #ababab;
+        --strong-color: #606060;
+        --link-hover-background-color: #fff200; }
+
+@media screen and (prefers-color-scheme: dark) { :root { --text-color: #efefef; --weak-color: #353535; --strong-color: #0d0d0d; --main-color: #1f1f1f; --link-hover-background-color: #3b678b; } }
+
 body { margin: 0;
        padding: 0;
-       color: #3b3b3b;
-       font-family: -apple-system, system-ui, BlinkMacSystemFont, Helvetica, Arial, sans-serif;
+       color: var(--text-color);
+       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
        font-size: 18px;
        text-rendering: optimizeLegibility; }
 
 body.index { width: 100vw;
              height: 100vh; }
 
-a:link, a:visited { color: #ababab;
+a:link, a:visited { color: var(--light-color);
                     font-size: 0.9rem;
                     font-variant: small-caps;
                     text-decoration: none;
                     text-transform: lowercase; }
 
-a:hover { color: #606060;
-          background-color: #fff200;
+a:hover { color: var(--dark-color);
+          background-color: var(--link-hover-background-color);
           text-decoration: none; }
 
 .index .flexbox { display: flex;
                   width: 100%; }
 
 .index .flexbox.main { align-items: stretch;
+                       background: var(--main-color);
                        height: 80.9%; }
 
 @media (min-width: 768px) { .index .flexbox.main { align-items: center; } }
@@ -34,8 +43,7 @@ a:hover { color: #606060;
 
 .index .about { margin: 0 auto;
                 overflow: auto;
-                padding: 1rem 1rem 0 1rem;
-                background: #fff; }
+                padding: 1rem 1rem 0 1rem; }
 
 @media (min-width: 768px) { .index .about { padding: 0; width: 90%; } }
 
@@ -50,5 +58,5 @@ a:hover { color: #606060;
 
 .index .about li, .index .about small { line-height: 1.5rem; }
 
-.index .colors :first-child { background: #ababab; }
-.index .colors :last-child { background: #606060; }
+.index .colors :first-child { background: var(--weak-color); }
+.index .colors :last-child { background: var(--strong-color); }
