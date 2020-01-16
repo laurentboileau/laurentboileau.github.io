@@ -7,7 +7,7 @@
 
 # THANKS
 
-    Design inspired by the artwork to Ryuichi Sakamoto and Alva Noto's Virus Series. See https://en.wikipedia.org/wiki/Vrioon.
+    Friends, family and other members of the web community.
 
 # TECHNOLOGY COLOPHON
 
