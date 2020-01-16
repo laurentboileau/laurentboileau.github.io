@@ -1,62 +1,62 @@
-:root { --text-color: #3b3b3b;
-        --main-color: #fff;
-        --weak-color: #ababab;
-        --strong-color: #606060;
-        --link-hover-background-color: #fff200; }
+/*
+    Styles for http://laurentboileau.com
+    Version: v2.0.0 pleuston
+*/
 
-@media screen and (prefers-color-scheme: dark) { :root { --text-color: #efefef; --weak-color: #353535; --strong-color: #0d0d0d; --main-color: #1f1f1f; --link-hover-background-color: #3b678b; } }
+/* Base styles */
 
-body { margin: 0;
-       padding: 0;
-       color: var(--text-color);
-       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-       font-size: 18px;
-       text-rendering: optimizeLegibility; }
+body {
+    color: #3b3b3b;
+    font-size: 16px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
 
-body.index { width: 100vw;
-             height: 100vh; }
+/* Main styles */
 
-a:link, a:visited { color: var(--light-color);
-                    font-size: 0.9rem;
-                    font-variant: small-caps;
-                    text-decoration: none;
-                    text-transform: lowercase; }
+main {
+    width: 600px;
+    margin: 0 auto;
+}
 
-a:hover { color: var(--dark-color);
-          background-color: var(--link-hover-background-color);
-          text-decoration: none; }
+/* Header styles */
 
-.index .flexbox { display: flex;
-                  width: 100%; }
+#main-header {
+    margin: 100px 0 100px;
+}
 
-.index .flexbox.main { align-items: stretch;
-                       background: var(--main-color);
-                       height: 80.9%; }
+/* Colophon styles */
 
-@media (min-width: 768px) { .index .flexbox.main { align-items: center; } }
+#colophon {
+    border-top: 1px solid #ccc;
+    padding-top: 2rem;
+}
 
-.index .flexbox.colors { height: 19.1%; }
+#colophon ul {
+    list-style: none;
+    margin: 0 0 2rem;
+    padding: 0
+}
 
-@media (min-width: 768px) { .index .flexbox.main, .index .flexbox.colors { height: 50%; } }
+#colophon ul li {
+    display: inline-block;
+    margin-right: 0.5rem;
+}
 
-.index .flexbox.colors div { width: 50%; height: 100%; }
+#colophon span[class *="simple-icon-"] {
+    fill: #3b3b3b;
+    width: 1.5rem;
+    height: 1.5rem;
+    display: inline-block
+}
 
-.index .about { margin: 0 auto;
-                overflow: auto;
-                padding: 1rem 1rem 0 1rem; }
+#colophon span[class *="simple-icon-"] svg:hover {
+    background-color: #fff200;
+    transition: 300ms;
+    transition-timing-function:ease-out
+}
 
-@media (min-width: 768px) { .index .about { padding: 0; width: 90%; } }
-
-.index .about h1 { margin: 0 0 0.75rem;
-                   font-size: 2.5rem; }
-
-.index .about p { font-size: 1rem; }
-
-.index .about ul { margin: 0.5rem 0 0 0;
-                   padding: 0;
-                   list-style-type: none; }
-
-.index .about li, .index .about small { line-height: 1.5rem; }
-
-.index .colors :first-child { background: var(--weak-color); }
-.index .colors :last-child { background: var(--strong-color); }
+#site-info {
+    color: #ababab;
+    font-size: .875rem;
+    margin-bottom: 1.5rem;
+}
