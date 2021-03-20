@@ -56,6 +56,10 @@ a:visited {
     margin: 0 auto;
 }
 
+.app-store-badge {
+    height: 60px;
+}
+
 /* Navigation styles */
 
 nav .separator {
