@@ -1,0 +1,34 @@
+<!-- Header -->
+<header id="main-header">
+    <div class="inner">
+        <!-- Title -->
+        <h1>
+            <a class="site-title" 
+               rel="author" 
+               href="{{ "/" | relative_url }}">
+               {{ site.title | escape }}
+            </a>
+        </h1>
+    
+        <!-- Description -->
+        <p>{{ site.description | escape }}</p>
+
+        <!-- Learn more -->        
+        <p><a href="/about">Learn more</a></p>
+    
+        <!-- Main navigation -->
+        <nav id="main-nav">
+            {% for item in site.navigation_links %}
+                {% if page.url == item.url %}
+                    <a href="{{ item.url }}" class="active">{{ item.title }}</a>
+                {% else %}
+                    <a href="{{ item.url }}">{{ item.title }}</a>
+                {% endif %}
+            
+                {% if forloop.last == false %}
+                <span class="separator">/</span>
+                {% endif %}
+            {% endfor %}
+        </nav>        
+    </div>
+</header>
