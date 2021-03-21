@@ -26,5 +26,10 @@ syndication_links:
   - title: RSS
     url: "/feed.xml"
 
+exclude:
+  - "Gemfile"
+  - "Gemfile.lock"
+  - "README.markdown"
+
 plugins:
   - jekyll-feed
