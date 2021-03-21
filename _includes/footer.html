@@ -1,0 +1,37 @@
+<!-- Footer -->
+<footer id="colophon">
+    <div class="inner">
+        <!-- Project links -->
+        <nav id="project-nav">
+            {% for item in site.external_project_links %}
+                <a href="{{ item.url }}">{{ item.title }}</a>            
+                {% if forloop.last == false %}
+                    <span class="separator">/</span>
+                {% endif %}
+            {% endfor %}
+        </nav>
+
+        <!-- Elsewhere links -->
+        <nav id="elsewhere-nav">
+            {% for item in site.social_links %}
+                <a href="{{ item.url }}">{{ item.title }}</a>            
+                {% if forloop.last == false %}
+                    <span class="separator">/</span>
+                {% endif %}
+            {% endfor %}
+        </nav>
+
+        <!-- Syndication links -->
+        <nav id="syndication-nav">
+            {% for item in site.syndication_links %}
+                <a href="{{ item.url }}">{{ item.title }}</a>            
+                {% if forloop.last == false %}
+                    <span class="separator">/</span>
+                {% endif %}
+            {% endfor %}
+        </nav>
+    
+        <!-- Copyright -->
+        <p id="site-info">© {{ 'now' | date: "%Y" }}</p>        
+    </div>
+</footer>
