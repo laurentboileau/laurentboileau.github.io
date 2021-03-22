@@ -3,6 +3,7 @@ layout: post
 title: "Developing Stations"
 description: "This milestone marks the start of my independent journey on the App Store."
 date: 2021-03-22 11:00:00 -0400
+image: "/assets/photos/developing-stations.jpg"
 ---
 
 I'm proud to have introduced [Stations][stations] [earlier today][earlier].
@@ -12,6 +13,8 @@ This milestone marks the start of my independent journey on the App Store.
 While I do have a decade of professional work experience, this is the first app I’ve entirely funded, designed, developed, and released on my own.
 
 Shipping has never felt this satisfying.
+
+![Board of development tasks at the time of launch](/assets/photos/developing-stations.jpg "Developing Stations")
 
 ### Business model
 
