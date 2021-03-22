@@ -12,7 +12,7 @@ You can find me on [Twitter][twitter] and [GitHub][github].
 
 #### Stations for iPhone
 
-**[Stations][stations] is your personal Montreal metro assistant.**
+[Stations][stations] is your personal Montreal metro assistant.
 
 <p style="text-align: center;">
     <img src="/assets/images/stations/iphone-navigate.png" alt="Stops" style="max-width: 31%; margin-right: 1%;" />
