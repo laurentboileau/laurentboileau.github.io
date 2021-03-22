@@ -17,6 +17,24 @@
     {% endif %}
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
+    <!-- Social -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:creator" content="{{ site.author.twitter }}">
+    <meta name="twitter:domain" content="{{ site.url }}">
+    {% if page.title %}
+    <meta name="twitter:title" content="{{ page.title }}">
+    {% else %}
+    <meta name="twitter:title" content="{{ site.title }}: {{ site.description }}">
+    {% endif %}
+    {% if page.description %}
+    <meta name="twitter:description" content="{{ page.description | strip_html }}">
+    {% else %}
+    <meta name="twitter:description" content="{{ site.title }}: {{ site.description }}">
+    {% endif %}
+    {% if page.image %}
+    <meta name="twitter:image:src" content="{{ page.image | absolute_url }}">
+    {% endif %}
+
     <!-- Styles -->
     <link rel="stylesheet" href="{{ "/assets/css/style.css" | relative_url }}">
 
