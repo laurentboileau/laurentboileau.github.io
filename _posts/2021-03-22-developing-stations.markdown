@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Developing Stations"
+description: "This milestone marks the start of my independent journey on the App Store."
 date: 2021-03-22 11:00:00 -0400
 ---
 
