@@ -134,9 +134,9 @@ main section li {
     margin: 0;
 }
 
-.post img {
-    max-width: var(--inner-max-width);
-    margin: 0 auto;
+.post img.hero {
+    display: block;
+    width: 100%;
 }
 
 .post footer time a {
