@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Introducing Stations for iPhone"
+description: "Stations is your personal Montreal metro assistant."
 date: 2021-03-22 08:00:00 -0400
 ---
 

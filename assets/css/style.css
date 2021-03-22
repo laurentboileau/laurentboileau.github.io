@@ -134,6 +134,11 @@ main section li {
     margin: 0;
 }
 
+.post img {
+    max-width: var(--inner-max-width);
+    margin: 0 auto;
+}
+
 .post footer time a {
     color: var(--footer-color);
 }
