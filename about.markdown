@@ -12,7 +12,7 @@ You can find me on [Twitter][twitter] and [GitHub][github].
 
 #### Stations for iPhone
 
-*[Stations][stations] is your personal Montreal metro assistant.*
+**[Stations][stations] is your personal Montreal metro assistant.**
 
 <p style="text-align: center;">
     <img src="/assets/images/stations/iphone-navigate.png" alt="Stops" style="max-width: 31%; margin-right: 1%;" />
@@ -26,9 +26,11 @@ You can find me on [Twitter][twitter] and [GitHub][github].
     </a>
 </p>
 
-- Browse metro stations and learn useful information about service locations and times. Enable the location feature to find the nearest stops.
-- Plan your trips with alarms. Schedule an alarm notification to let you know when it’s time to go. Alarm configuration options are sourced from service schedules on the transit agency’s website.
-- Designed and optimized for iPhone.
+Browse metro stations and learn useful information about service locations and times. Enable the location feature to find the nearest stops.
+
+Plan your trips with alarms. Schedule an alarm notification to let you know when it’s time to go. Alarm configuration options are sourced from service schedules on the transit agency’s website.
+
+Designed and optimized for iPhone.
 
 [stations]: https://stationsmontreal.app
 [twitter]: https://twitter.com/laurentboileau
