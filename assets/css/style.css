@@ -19,6 +19,7 @@
     --footer-color: #ababab;
     --accent-color: #fff200;
     --separator-color: #ccc;
+    --header-spacing: 100px;
     --inner-max-width: 600px;
 }
 
@@ -70,7 +71,12 @@ nav .separator {
 /* Header styles */
 
 #main-header {
-    margin: 100px auto;
+    margin: var(--header-spacing) auto 0 auto;
+}
+
+#main-header .inner {
+    padding-bottom: var(--header-spacing);
+    border-bottom: 1px dashed var(--separator-color);
 }
 
 #main-header h1 a, #main-header h1 a:visited {
