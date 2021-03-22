@@ -22,7 +22,7 @@ Stations *currently* is a paid app.
 
 I plan to eventually migrate to a free with a subscription model, but I believe that paid is better suited *at the moment*.
 
-The current version has a complete, albeit limited feature set. There are features in the roadmap that are well suited for subscriptions, but I'm not there yet. I work slowly.
+The current version has a complete, albeit limited feature set. There are features in the roadmap that are well suited for subscriptions, but I'm not there yet. [I work slowly][yt].
 
 Additionally, I'm still finding my indie bearings and I don't want to be overwhelmed with support requests.
 
@@ -39,4 +39,5 @@ My goal is to have fun making a well-maintained app that's a good platform citiz
 
 [stations]: https://stationsmontreal.app
 [earlier]: https://laurentboileau.ca/2021/03/22/introducing-stations-for-iphone.html
+[yt]: https://www.youtube.com/watch?v=7ucXAlmC1-0
 [1]: https://stationsmontreal.app/release-notes/1.0.0.html
