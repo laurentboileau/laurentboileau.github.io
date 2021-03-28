@@ -40,4 +40,4 @@ My goal is to have fun making a well-maintained app that's a good platform citiz
 [stations]: https://stationsmontreal.app
 [earlier]: https://laurentboileau.ca/2021/03/22/introducing-stations-for-iphone.html
 [yt]: https://www.youtube.com/watch?v=7ucXAlmC1-0
-[1]: https://stationsmontreal.app/release-notes/1.0.0.html
+[1]: https://stationsmontreal.app/release-notes/1.0.html
