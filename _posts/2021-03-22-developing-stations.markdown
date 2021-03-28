@@ -30,7 +30,7 @@ This is a labor of love project that I work on in my spare time. Ideally, I shou
 
 ### Future
 
-An effort was made to keep [1.0.0][1] lean. Otherwise, there's no telling when (or if) I would've shipped.
+An effort was made to keep [1.0][1] lean. Otherwise, there's no telling when (or if) I would've shipped.
 
 That version is a launchpad and I've got a good backlog to work with.
 
