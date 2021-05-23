@@ -131,12 +131,17 @@ main section li {
 }
 
 .post header h2 {
-    margin: 0;
+    margin: 0 0 1em 0;
 }
 
 .post img.hero {
     display: block;
     width: 100%;
+}
+
+.post h3 {
+    margin-top: 2em;
+    margin-bottom: 1em;
 }
 
 .post footer time a {
@@ -150,7 +155,12 @@ main section li {
 }
 
 .page header h2 {
-    margin: 0;
+    margin: 0 0 1em 0;
+}
+
+.page h3 {
+    margin-top: 2em;
+    margin-bottom: 1em;
 }
 
 /* Colophon styles */
