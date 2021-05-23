@@ -40,10 +40,6 @@ body {
     font-family: var(--body-font);
 }
 
-a {
-	text-decoration: none;
-}
-
 a:link {
 	color: var(--link-color);
 }
