@@ -19,7 +19,7 @@ date: 2021-03-22 08:00:00 -0400
     </a>
 </p>
 
-Browse metro stations and learn useful information about service locations and times. Enable the location feature to find the nearest stops.
+Browse metro stations and learn useful information about service locations and schedules. Enable the location feature to find the nearest stops.
 
 Plan your trips with alarms. Schedule an alarm notification to let you know when it’s time to go.
 
