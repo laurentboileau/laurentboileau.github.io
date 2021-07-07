@@ -16,10 +16,6 @@ external_project_links:
 social_links:
   - title: GitHub
     url: "https://github.com/laurentboileau"
-  - title: Instagram
-    url: "https://instagram.com/laurentboileau"
-  - title: Pinboard
-    url: "https://pinboard.in/u:laurentboileau"
   - title: Twitter
     url: "https://twitter.com/laurentboileau"
 
