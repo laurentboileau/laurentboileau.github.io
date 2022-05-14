@@ -17,7 +17,7 @@ private struct LaurentBoileauHTMLFactory<Site: Website>: HTMLFactory {
             .lang(context.site.language),
             .head(for: index, on: context.site),
             .body {
-                SiteHeader(context: context, selectedSelectionID: nil)
+                SiteHeader(context: context)
                 Wrapper {
                     H1(index.title)
                     Paragraph(context.site.description)
@@ -42,7 +42,7 @@ private struct LaurentBoileauHTMLFactory<Site: Website>: HTMLFactory {
             .lang(context.site.language),
             .head(for: section, on: context.site),
             .body {
-                SiteHeader(context: context, selectedSelectionID: section.id)
+                SiteHeader(context: context)
                 Wrapper {
                     H1(section.title)
                     ItemList(items: section.items, site: context.site)
@@ -60,7 +60,7 @@ private struct LaurentBoileauHTMLFactory<Site: Website>: HTMLFactory {
             .body(
                 .class("item-page"),
                 .components {
-                    SiteHeader(context: context, selectedSelectionID: item.sectionID)
+                    SiteHeader(context: context)
                     Wrapper {
                         Article {
                             Div(item.content.body).class("content")
@@ -80,7 +80,7 @@ private struct LaurentBoileauHTMLFactory<Site: Website>: HTMLFactory {
             .lang(context.site.language),
             .head(for: page, on: context.site),
             .body {
-                SiteHeader(context: context, selectedSelectionID: nil)
+                SiteHeader(context: context)
                 Wrapper(page.body)
                 SiteFooter()
             }
@@ -93,7 +93,7 @@ private struct LaurentBoileauHTMLFactory<Site: Website>: HTMLFactory {
             .lang(context.site.language),
             .head(for: page, on: context.site),
             .body {
-                SiteHeader(context: context, selectedSelectionID: nil)
+                SiteHeader(context: context)
                 Wrapper {
                     H1("Browse all tags")
                     List(page.tags.sorted()) { tag in
@@ -117,7 +117,7 @@ private struct LaurentBoileauHTMLFactory<Site: Website>: HTMLFactory {
             .lang(context.site.language),
             .head(for: page, on: context.site),
             .body {
-                SiteHeader(context: context, selectedSelectionID: nil)
+                SiteHeader(context: context)
                 Wrapper {
                     H1 {
                         Text("Tagged with ")
@@ -154,32 +154,33 @@ private struct Wrapper: ComponentContainer {
 
 private struct SiteHeader<Site: Website>: Component {
     var context: PublishingContext<Site>
-    var selectedSelectionID: Site.SectionID?
 
     var body: Component {
         Header {
             Wrapper {
-                Link(context.site.name, url: "/")
-                    .class("site-name")
-
-                if Site.SectionID.allCases.count > 1 {
-                    navigation
-                }
+                heading
+                description
+                learnMore
             }
         }
+        .id("main-header")
     }
-
-    private var navigation: Component {
-        Navigation {
-            List(Site.SectionID.allCases) { sectionID in
-                let section = context.sections[sectionID]
-
-                return Link(section.title,
-                    url: section.path.absoluteString
-                )
-                .class(sectionID == selectedSelectionID ? "selected" : "")
-            }
-        }
+    
+    private var heading: Component {
+        H1(
+            Link(context.site.name, url: "/")
+                .class("site-title")
+        )
+    }
+    
+    private var description: Component {
+        Paragraph(context.site.description)
+    }
+    
+    private var learnMore: Component {
+        Paragraph(
+            Link("Learn more", url: "/about")
+        )
     }
 }
 

@@ -48,7 +48,7 @@ a:visited {
 	color: var(--link-visited-color);
 }
 
-.inner {
+.wrapper {
     max-width: var(--inner-max-width);
     margin: 0 auto;
 }
@@ -70,7 +70,7 @@ nav .separator {
     margin: var(--header-spacing) auto 0 auto;
 }
 
-#main-header .inner {
+#main-header .wrapper {
     padding-bottom: var(--header-spacing);
     border-bottom: 1px dashed var(--separator-color);
 }
@@ -161,7 +161,7 @@ main section li {
 
 /* Colophon styles */
 
-#colophon .inner {
+#colophon .wrapper {
     border-top: 1px solid var(--separator-color);
     padding-top: 2rem;
     font-size: .875rem;
