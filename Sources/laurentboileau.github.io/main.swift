@@ -22,4 +22,4 @@ struct LaurentBoileau: Website {
 }
 
 // This will generate your website using the built-in Foundation theme:
-try LaurentBoileau().publish(withTheme: .foundation)
+try LaurentBoileau().publish(withTheme: .laurentboileau)
