@@ -70,7 +70,7 @@ private struct LaurentBoileauHTMLFactory<Site: Website>: HTMLFactory {
             .head(for: page, on: context.site),
             .body {
                 SiteHeader(context: context)
-                Wrapper(page.body)
+                SitePage(page: page)
                 SiteFooter()
             }
         )
@@ -246,5 +246,27 @@ private struct SiteFooter: Component {
     private var siteInfo: Component {
         Paragraph("© \(dateFormatter.string(from: Date.now))")
             .id("site-info")
+    }
+}
+
+private struct SitePage: Component {
+    var page: Page
+
+    var body: Component {
+        MainElement {
+            Wrapper {
+                Article {
+                    header
+                    page.body
+                }
+                .class("page")
+            }
+        }
+    }
+
+    private var header: Component {
+        Header {
+            H2(page.title)
+        }
     }
 }
