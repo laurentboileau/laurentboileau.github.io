@@ -1,3 +1,4 @@
+import Foundation
 import Plot
 import Publish
 
@@ -18,19 +19,7 @@ private struct LaurentBoileauHTMLFactory<Site: Website>: HTMLFactory {
             .head(for: index, on: context.site),
             .body {
                 SiteHeader(context: context)
-                Wrapper {
-                    H1(index.title)
-                    Paragraph(context.site.description)
-                        .class("description")
-                    H2("Latest content")
-                    ItemList(
-                        items: context.allItems(
-                            sortedBy: \.date,
-                            order: .descending
-                        ),
-                        site: context.site
-                    )
-                }
+                IndexBlogPosts(context: context)
                 SiteFooter()
             }
         )
@@ -181,6 +170,46 @@ private struct SiteHeader<Site: Website>: Component {
         Paragraph(
             Link("Learn more", url: "/about")
         )
+    }
+}
+
+private struct IndexBlogPosts<Site: Website>: Component {
+    var context: PublishingContext<Site>
+
+    private var items: [Item<Site>] {
+        context.allItems(sortedBy: \.date, order: .descending)
+    }
+
+    private var dateFormatter: DateFormatter {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "dd MMM yyyy"
+        return formatter
+    }
+
+    var body: Component {
+        MainElement {
+            Wrapper {
+                SectionElement {
+                    heading
+                    posts
+                }
+                .id("posts")
+            }
+        }
+    }
+
+    private var heading: Component {
+        H2("Blog posts")
+    }
+
+    private var posts: Component {
+        List(items) { item in
+            Div {
+                Span(dateFormatter.string(from: item.date))
+                Link(item.title, url: item.path.absoluteString)
+            }
+        }
+        .id("posts-list")
     }
 }
 
