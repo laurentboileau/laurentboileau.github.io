@@ -242,15 +242,55 @@ private struct ItemTagList<Site: Website>: Component {
 }
 
 private struct SiteFooter: Component {
+    private struct Separator: Component {
+        var body: Component {
+            Span("/").class("separator")
+        }
+    }
+
+    private var dateFormatter: DateFormatter {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy"
+        return formatter
+    }
+
     var body: Component {
         Footer {
-            Paragraph {
-                Text("Generated using ")
-                Link("Publish", url: "https://github.com/johnsundell/publish")
-            }
-            Paragraph {
-                Link("RSS feed", url: "/feed.rss")
+            Wrapper {
+                projects
+                elsewhere
+                syndication
+                siteInfo
             }
         }
+        .id("colophon")
+    }
+
+    private var projects: Component {
+        Navigation {
+            Link("Stations for iPhone", url: "https://stationsmontreal.app")
+        }
+        .id("project-nav")
+    }
+
+    private var elsewhere: Component {
+        Navigation {
+            Link("GitHub", url: "https://github.com/laurentboileau")
+            Separator()
+            Link("Twitter", url: "https://twitter.com/laurentboileau")
+        }
+        .id("elsewhere-nav")
+    }
+
+    private var syndication: Component {
+        Navigation {
+            Link("RSS", url: "/feed.rss")
+        }
+        .id("syndication-nav")
+    }
+
+    private var siteInfo: Component {
+        Paragraph("© \(dateFormatter.string(from: Date.now))")
+            .id("site-info")
     }
 }
