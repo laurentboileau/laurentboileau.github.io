@@ -14,9 +14,9 @@ struct LaurentBoileau: Website {
     }
 
     // Update these properties to configure your website:
-    var url = URL(string: "https://your-website-url.com")!
-    var name = "laurentboileau.github.io"
-    var description = "A description of laurentboileau.github.io"
+    var url = URL(string: "https://laurentboileau.com")!
+    var name = "Laurent Boileau"
+    var description = "Software developer in Montréal, Canada"
     var language: Language { .english }
     var imagePath: Path? { nil }
 }
