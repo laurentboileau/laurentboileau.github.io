@@ -46,20 +46,11 @@ private struct LaurentBoileauHTMLFactory<Site: Website>: HTMLFactory {
         HTML(
             .lang(context.site.language),
             .head(for: item, on: context.site),
-            .body(
-                .class("item-page"),
-                .components {
-                    SiteHeader(context: context)
-                    Wrapper {
-                        Article {
-                            Div(item.content.body).class("content")
-                            Span("Tagged with: ")
-                            ItemTagList(item: item, site: context.site)
-                        }
-                    }
-                    SiteFooter()
-                }
-            )
+            .body {
+                SiteHeader(context: context)
+                SiteItemPage(item: item)
+                SiteFooter()
+            }
         )
     }
 
@@ -267,6 +258,44 @@ private struct SitePage: Component {
     private var header: Component {
         Header {
             H2(page.title)
+        }
+    }
+}
+
+private struct SiteItemPage<Site: Website>: Component {
+    var item: Item<Site>
+
+    private var dateFormatter: DateFormatter {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "MMMM d, YYYY"
+        return formatter
+    }
+
+    var body: Component {
+        MainElement {
+            Wrapper {
+                Article {
+                    header
+                    item.body
+                    footer
+                }
+                .class("post")
+            }
+        }
+    }
+
+    private var header: Component {
+        Header {
+            H2(item.title)
+        }
+    }
+
+    private var footer: Component {
+        Footer {
+            TimeElement {
+                Link(dateFormatter.string(from: item.date), url: item.path.absoluteString)
+            }
+            .datetime(item.date)
         }
     }
 }
