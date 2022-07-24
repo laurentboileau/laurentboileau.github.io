@@ -236,7 +236,7 @@ private struct SitePage: Component {
             Wrapper {
                 Article {
                     header
-                    page.body
+                    content
                 }
                 .class("page")
             }
@@ -247,6 +247,10 @@ private struct SitePage: Component {
         Header {
             H2(page.title)
         }
+    }
+
+    private var content: Component {
+        page.body
     }
 }
 
