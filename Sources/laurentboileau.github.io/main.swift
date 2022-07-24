@@ -19,6 +19,7 @@ struct LaurentBoileau: Website {
     var description = "Software developer in Montréal, Canada"
     var language: Language { .english }
     var imagePath: Path? { nil }
+    var favicon: Favicon? { .init(path: "/assets/images/favicon.png") }
 }
 
 // This will generate your website using the built-in Foundation theme:
