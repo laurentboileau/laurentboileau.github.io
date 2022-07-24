@@ -113,7 +113,7 @@ main section li {
 
 /* Posts styles */
 
-#posts-list span {
+#index-items span {
     color: var(--post-date-color);
     font-size: .875rem;
     font-family: var(--monospace-font);

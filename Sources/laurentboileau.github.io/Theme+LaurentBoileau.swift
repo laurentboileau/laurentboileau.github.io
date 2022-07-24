@@ -127,9 +127,8 @@ private struct IndexItems<Site: Website>: Component {
             Wrapper {
                 SectionElement {
                     heading
-                    posts
+                    indexItems
                 }
-                .id("posts")
             }
         }
     }
@@ -138,14 +137,14 @@ private struct IndexItems<Site: Website>: Component {
         H2("Blog posts")
     }
 
-    private var posts: Component {
+    private var indexItems: Component {
         List(items) { item in
             Div {
                 Span(DateFormatter.indexItem.string(from: item.date))
                 Link(item.title, url: item.path.absoluteString)
             }
         }
-        .id("posts-list")
+        .id("index-items")
     }
 }
 
