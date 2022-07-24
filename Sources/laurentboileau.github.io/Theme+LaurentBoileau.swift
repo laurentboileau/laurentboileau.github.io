@@ -32,10 +32,7 @@ private struct LaurentBoileauHTMLFactory<Site: Website>: HTMLFactory {
             .head(for: section, on: context.site),
             .body {
                 SiteHeader(context: context)
-                Wrapper {
-                    H1(section.title)
-                    ItemList(items: section.items, site: context.site)
-                }
+                SectionItems(section: section, site: context.site)
                 SiteFooter()
             }
         )
@@ -152,31 +149,43 @@ private struct IndexItems<Site: Website>: Component {
     }
 }
 
-private struct ItemList<Site: Website>: Component {
-    var items: [Item<Site>]
+private struct SectionItems<Site: Website>: Component {
+    var section: Section<Site>
     var site: Site
 
+    private var items: [Item<Site>] {
+        section.items.sorted {
+            $0[keyPath: \.date] > $1[keyPath: \.date]
+        }
+    }
+
     var body: Component {
-        List(items) { item in
-            Article {
-                H1(Link(item.title, url: item.path.absoluteString))
-                ItemTagList(item: item, site: site)
-                Paragraph(item.description)
+        MainElement {
+            Wrapper {
+                SectionElement {
+                    heading
+                    sectionItems
+                }
             }
         }
-        .class("item-list")
     }
-}
 
-private struct ItemTagList<Site: Website>: Component {
-    var item: Item<Site>
-    var site: Site
+    private var heading: Component {
+        H2("Posts")
+    }
 
-    var body: Component {
-        List(item.tags) { tag in
-            Link(tag.string, url: site.path(for: tag).absoluteString)
+    private var sectionItems: Component {
+        List(items) { item in
+            Article {
+                H2(Link(item.title, url: item.path.absoluteString))
+                Paragraph(item.description)
+                TimeElement {
+                    Link(DateFormatter.item.string(from: item.date), url: item.path.absoluteString)
+                }
+                .datetime(item.date)
+            }
         }
-        .class("tag-list")
+        .id("section-items")
     }
 }
 

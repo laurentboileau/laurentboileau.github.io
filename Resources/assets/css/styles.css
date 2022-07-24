@@ -120,6 +120,14 @@ main section li {
     margin-right: .75rem;
 }
 
+#section-items {
+    margin-top: 2.5rem;
+}
+
+#section-items li {
+    margin-bottom: 3rem;
+}
+
 /* Post styles */
 
 .post {
