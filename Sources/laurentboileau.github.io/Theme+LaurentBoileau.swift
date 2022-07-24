@@ -19,7 +19,7 @@ private struct LaurentBoileauHTMLFactory<Site: Website>: HTMLFactory {
             .head(for: index, on: context.site),
             .body {
                 SiteHeader(context: context)
-                IndexBlogPosts(context: context)
+                IndexItems(context: context)
                 SiteFooter()
             }
         )
@@ -118,7 +118,7 @@ private struct SiteHeader<Site: Website>: Component {
     }
 }
 
-private struct IndexBlogPosts<Site: Website>: Component {
+private struct IndexItems<Site: Website>: Component {
     var context: PublishingContext<Site>
 
     private var items: [Item<Site>] {
