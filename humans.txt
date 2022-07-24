@@ -3,14 +3,14 @@
 
 # TEAM
 
-    Laurent Boileau - @laurentboileau
+	Laurent Boileau - @laurentboileau
 
 # THANKS
 
-    Friends, family and other members of the web community.
+	Friends, family and other members of the web community.
 
 # TECHNOLOGY COLOPHON
 
-    HTML, CSS
-    Jekyll - https://jekyllrb.com
-    GitHub Pages - https://pages.github.com
+	HTML, CSS
+	Publish - https://github.com/johnsundell/publish
+	GitHub Pages - https://pages.github.com
