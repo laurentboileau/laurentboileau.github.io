@@ -125,12 +125,6 @@ private struct IndexBlogPosts<Site: Website>: Component {
         context.allItems(sortedBy: \.date, order: .descending)
     }
 
-    private var dateFormatter: DateFormatter {
-        let formatter = DateFormatter()
-        formatter.dateFormat = "dd MMM yyyy"
-        return formatter
-    }
-
     var body: Component {
         MainElement {
             Wrapper {
@@ -150,7 +144,7 @@ private struct IndexBlogPosts<Site: Website>: Component {
     private var posts: Component {
         List(items) { item in
             Div {
-                Span(dateFormatter.string(from: item.date))
+                Span(DateFormatter.indexItem.string(from: item.date))
                 Link(item.title, url: item.path.absoluteString)
             }
         }
@@ -193,12 +187,6 @@ private struct SiteFooter: Component {
         }
     }
 
-    private var dateFormatter: DateFormatter {
-        let formatter = DateFormatter()
-        formatter.dateFormat = "yyyy"
-        return formatter
-    }
-
     var body: Component {
         Footer {
             Wrapper {
@@ -235,7 +223,7 @@ private struct SiteFooter: Component {
     }
 
     private var siteInfo: Component {
-        Paragraph("© \(dateFormatter.string(from: Date.now))")
+        Paragraph("© \(DateFormatter.copyright.string(from: Date.now))")
             .id("site-info")
     }
 }
@@ -265,12 +253,6 @@ private struct SitePage: Component {
 private struct SiteItemPage<Site: Website>: Component {
     var item: Item<Site>
 
-    private var dateFormatter: DateFormatter {
-        let formatter = DateFormatter()
-        formatter.dateFormat = "MMMM d, YYYY"
-        return formatter
-    }
-
     var body: Component {
         MainElement {
             Wrapper {
@@ -293,9 +275,34 @@ private struct SiteItemPage<Site: Website>: Component {
     private var footer: Component {
         Footer {
             TimeElement {
-                Link(dateFormatter.string(from: item.date), url: item.path.absoluteString)
+                Link(DateFormatter.item.string(from: item.date), url: item.path.absoluteString)
             }
             .datetime(item.date)
         }
     }
+}
+
+// MARK: - Date Formatters
+
+private extension DateFormatter {
+    static let indexItem: DateFormatter = {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "dd MMM yyyy"
+        formatter.timeZone = .current
+        return formatter
+    }()
+
+    static let item: DateFormatter = {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "MMMM d, YYYY"
+        formatter.timeZone = .current
+        return formatter
+    }()
+
+    static let copyright: DateFormatter = {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy"
+        formatter.timeZone = .current
+        return formatter
+    }()
 }
