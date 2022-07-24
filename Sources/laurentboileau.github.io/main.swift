@@ -22,5 +22,7 @@ struct LaurentBoileau: Website {
     var favicon: Favicon? { .init(path: "/assets/images/favicon.png") }
 }
 
-// This will generate your website using the built-in Foundation theme:
-try LaurentBoileau().publish(withTheme: .laurentboileau)
+try LaurentBoileau().publish(
+    withTheme: .laurentboileau,
+    deployedUsing: .gitHub("laurentboileau/laurentboileau.github.io", branch: "main")
+)
