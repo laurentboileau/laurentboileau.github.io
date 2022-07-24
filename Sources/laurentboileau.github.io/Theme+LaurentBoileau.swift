@@ -29,7 +29,7 @@ private struct LaurentBoileauHTMLFactory<Site: Website>: HTMLFactory {
                          context: PublishingContext<Site>) throws -> HTML {
         HTML(
             .lang(context.site.language),
-            .head(for: section, on: context.site),
+            .head(for: section, on: context.site, titleSeparator: " — "),
             .body {
                 SiteHeader(context: context)
                 SectionItems(section: section, site: context.site)
@@ -42,7 +42,7 @@ private struct LaurentBoileauHTMLFactory<Site: Website>: HTMLFactory {
                       context: PublishingContext<Site>) throws -> HTML {
         HTML(
             .lang(context.site.language),
-            .head(for: item, on: context.site),
+            .head(for: item, on: context.site, titleSeparator: " — "),
             .body {
                 SiteHeader(context: context)
                 SiteItemPage(item: item)
@@ -55,7 +55,7 @@ private struct LaurentBoileauHTMLFactory<Site: Website>: HTMLFactory {
                       context: PublishingContext<Site>) throws -> HTML {
         HTML(
             .lang(context.site.language),
-            .head(for: page, on: context.site),
+            .head(for: page, on: context.site, titleSeparator: " — "),
             .body {
                 SiteHeader(context: context)
                 SitePage(page: page)
