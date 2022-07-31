@@ -1,7 +1,0 @@
----
-title: Not Found
----
-
-[Home ↩][root]
-
-[root]: /
