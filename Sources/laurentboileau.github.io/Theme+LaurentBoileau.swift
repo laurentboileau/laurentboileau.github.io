@@ -220,6 +220,8 @@ private struct SiteFooter: Component {
             Separator()
             Link("GitHub", url: "https://github.com/laurentboileau")
             Separator()
+            Link("Glass", url: "https://glass.photo/laurentboileau")
+            Separator()
             Link("Twitter", url: "https://twitter.com/laurentboileau")
         }
         .id("elsewhere-nav")
