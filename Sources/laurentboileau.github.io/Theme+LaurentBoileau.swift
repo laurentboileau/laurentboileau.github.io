@@ -216,8 +216,6 @@ private struct SiteFooter: Component {
 
     private var elsewhere: Component {
         Navigation {
-            Link("Micro.blog", url: "https://microblog.laurentboileau.com")
-            Separator()
             Link("GitHub", url: "https://github.com/laurentboileau")
             Separator()
             Link("Glass", url: "https://glass.photo/laurentboileau")
