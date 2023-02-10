@@ -221,6 +221,7 @@ private struct SiteFooter: Component {
             Link("Glass", url: "https://glass.photo/laurentboileau")
             Separator()
             Link("Mastodon", url: "https://mastodon.social/@laurentboileau")
+                .attribute(named: "rel", value: "me")
         }
         .id("elsewhere-nav")
     }
