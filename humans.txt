@@ -3,7 +3,7 @@
 
 # TEAM
 
-	Laurent Boileau - @laurentboileau
+	Laurent Boileau - laurentboileau@mastodon.social
 
 # THANKS
 
