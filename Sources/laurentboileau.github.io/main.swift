@@ -24,5 +24,7 @@ struct LaurentBoileau: Website {
 
 try LaurentBoileau().publish(
     withTheme: .laurentboileau,
+    indentation: .tabs(1),
+    rssFeedConfig: RSSFeedConfiguration(indentation: .tabs(1)),
     deployedUsing: .gitHub("laurentboileau/laurentboileau.github.io", branch: "main")
 )
