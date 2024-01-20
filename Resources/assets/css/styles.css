@@ -7,17 +7,23 @@
 
 :root {
     color-scheme: light dark;
+    
+    /* Colors */
     --body-color: #3b3b3b;
     --body-background-color: white;
-    --body-font: -apple-system, 'Helvetica Neue', sans-serif;
-    --body-font-size: 16px;
-    --body-line-height: 1.6;
-    --monospace-font: SFMono-Regular, Menlo, monospace;
     --link-color: #007aff;
     --link-visited-color: #007aff;
     --post-date-color: #aaa;
     --footer-color: #ababab;
     --separator-color: #ccc;
+    
+    /* Typefaces */
+    --body-font: -apple-system, 'Helvetica Neue', sans-serif;
+    --monospace-font: SFMono-Regular, Menlo, monospace;
+    
+    /* Dimensions */
+    --body-font-size: 16px;
+    --body-line-height: 1.6;
 }
 
 @media(prefers-color-scheme: dark) {
