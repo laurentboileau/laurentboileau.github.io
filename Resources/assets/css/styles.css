@@ -53,10 +53,6 @@ a:visited {
     margin: 0 auto;
 }
 
-.app-store-badge {
-    height: 60px;
-}
-
 /* Navigation styles */
 
 nav .separator {
@@ -172,4 +168,10 @@ main li {
 #site-info {
     color: var(--color-footer);
     margin-top: 2rem;
+}
+
+/* Misc. styles */
+
+.app-store-badge {
+    height: 60px;
 }
