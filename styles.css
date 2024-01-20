@@ -1,87 +1,74 @@
 /*
     Styles for https://laurentboileau.com
-    Version: v4.0.0
+    Version: v4.1.0
 */
 
 /* Variables */
 
 :root {
     color-scheme: light dark;
-    --body-color: #3b3b3b;
-    --body-background-color: white;
-    --body-font: -apple-system, 'Helvetica Neue', sans-serif;
-    --body-font-size: 16px;
-    --body-line-height: 1.6;
-    --monospace-font: SFMono-Regular, Menlo, monospace;
-    --link-color: #007aff;
-    --link-visited-color: #007aff;
-    --post-date-color: #aaa;
-    --footer-color: #ababab;
-    --accent-color: #fff200;
-    --separator-color: #ccc;
-    --header-spacing: 100px;
-    --inner-max-width: 600px;
+    
+    /* Colors */
+    --color-body: rgba(0, 0, 0, 0.75);
+    --color-body-background: #fff;
+    --color-link: hsl(212, 100%, 50%);
+    --color-link-visited: hsl(250, 66%, 50%);
+    --color-post-date: rgba(0, 0, 0, 0.25);
+    --color-separator: rgba(0, 0, 0, 0.25);
+    --color-footer: rgba(0, 0, 0, 0.35);
+
+    /* Typefaces */
+    --typeface-body: -apple-system, 'Helvetica Neue', sans-serif;
+    --typeface-body-font-size: 12pt;
+    --typeface-body-line-height: 1.6;
+    --typeface-monospace: SFMono-Regular, Menlo, monospace;
 }
 
 @media(prefers-color-scheme: dark) {
     :root {
-        --body-color: #efefef;
-        --body-background-color: black;
-        --accent-color: #f95f39;
+        --color-body: #efefef;
+        --color-body-background: black;
     }
 }
 
 /* Base styles */
 
 body {
-    color: var(--body-color);
-    background-color: var(--body-background-color);
-    font-size: var(--body-font-size);
-    font-family: var(--body-font);
+    color: var(--color-body);
+    background-color: var(--color-body-background);
+    font-size: var(--typeface-body-font-size);
+    font-family: var(--typeface-body);
 }
 
 a:link {
-	color: var(--link-color);
+	color: var(--color-link);
 }
 
 a:visited {
-	color: var(--link-visited-color);
+	color: var(--color-link-visited);
 }
 
 .wrapper {
-    max-width: var(--inner-max-width);
+    max-width: 600px;
     margin: 0 auto;
-}
-
-.app-store-badge {
-    height: 60px;
 }
 
 /* Navigation styles */
 
 nav .separator {
-    color: var(--separator-color);
+    color: var(--color-separator);
     margin: 0 .75rem;
 }
 
-/* Header styles */
-
-#main-header {
-    margin: var(--header-spacing) auto 0 auto;
-}
+/* Main header styles */
 
 #main-header .wrapper {
-    padding-bottom: var(--header-spacing);
-    border-bottom: 1px dashed var(--separator-color);
+    padding: 40px 0;
+    border-bottom: 1px dashed var(--color-separator);
 }
 
 #main-header h1 a, #main-header h1 a:visited {
-    color: var(--body-color);
-    background-color: none;
-}
-
-#main-header h1 a:hover {
-    background-color: var(--accent-color);
+    color: var(--color-body);
 }
 
 #main-header nav {
@@ -91,32 +78,28 @@ nav .separator {
 /* Main styles */
 
 main {
-    margin: 4rem 0;
+    margin: 50px 0;
 }
 
-main section {
-    margin-bottom: 3rem;
-}
-
-main section h2 {
+main h2 {
     font-size: 1rem;
 }
 
-main section ul {
+main ul {
     padding: 0;
     list-style-type: none;
 }
 
-main section li {
+main li {
     margin-bottom: .5rem;
 }
 
 /* Posts styles */
 
 #index-items span {
-    color: var(--post-date-color);
+    color: var(--color-post-date);
     font-size: .875rem;
-    font-family: var(--monospace-font);
+    font-family: var(--typeface-monospace);
     margin-right: .75rem;
 }
 
@@ -131,7 +114,7 @@ main section li {
 /* Post styles */
 
 .post {
-    line-height: var(--body-line-height);
+    line-height: var(--typeface-body-line-height);
 }
 
 .post header h2 {
@@ -149,13 +132,13 @@ main section li {
 }
 
 .post footer time a {
-    color: var(--footer-color);
+    color: var(--color-footer);
 }
 
 /* Page styles */
 
 .page {
-    line-height: var(--body-line-height);   
+    line-height: var(--typeface-body-line-height);   
 }
 
 .page header h2 {
@@ -167,19 +150,24 @@ main section li {
     margin-bottom: 1em;
 }
 
-/* Colophon styles */
+/* Main footer styles */
 
-#colophon .wrapper {
-    border-top: 1px solid var(--separator-color);
-    padding-top: 2rem;
-    font-size: .875rem;
+#main-footer .wrapper {
+    padding: 50px 0 0;
+    border-top: 1px solid var(--color-separator);
 }
 
-#colophon nav {
+#main-footer nav {
     margin-bottom: .5rem;
 }
 
 #site-info {
-    color: var(--footer-color);
+    color: var(--color-footer);
     margin-top: 2rem;
+}
+
+/* Misc. styles */
+
+.app-store-badge {
+    height: 60px;
 }
