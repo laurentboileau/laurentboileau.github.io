@@ -4,7 +4,7 @@
 		<loc>https://laurentboileau.com/posts</loc>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
-		<lastmod>2024-01-19</lastmod>
+		<lastmod>2024-01-20</lastmod>
 	</url>
 	<url>
 		<loc>https://laurentboileau.com/posts/developing-stations</loc>
@@ -22,6 +22,6 @@
 		<loc>https://laurentboileau.com/about</loc>
 		<changefreq>monthly</changefreq>
 		<priority>0.5</priority>
-		<lastmod>2024-01-19</lastmod>
+		<lastmod>2024-01-20</lastmod>
 	</url>
 </urlset>
