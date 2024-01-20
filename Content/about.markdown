@@ -2,7 +2,7 @@
 title: About
 ---
 
-Hi, I'm Laurent. I'm a software developer and music enthusiast. 
+I'm a software developer and music enthusiast. 
 
 You can find me on [GitHub][github] and [Mastodon][mastodon].
 
