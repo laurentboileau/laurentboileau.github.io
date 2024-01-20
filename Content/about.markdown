@@ -4,7 +4,7 @@ title: About
 
 Hi, I'm Laurent. I'm a software developer and music enthusiast. 
 
-You can find me on [Twitter][twitter] and [GitHub][github].
+You can find me on [GitHub][github] and [Mastodon][mastodon].
 
 ### Projects
 
@@ -30,6 +30,6 @@ Plan your trips with alarms. Schedule an alarm notification to let you know when
 
 Designed and optimized for iPhone.
 
-[stations]: https://stationsmontreal.app
-[twitter]: https://twitter.com/laurentboileau
 [github]: https://github.com/laurentboileau
+[mastodon]: https://mastodon.social/@laurentboileau
+[stations]: https://stationsmontreal.app
