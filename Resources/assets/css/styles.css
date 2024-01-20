@@ -82,20 +82,16 @@ main {
     margin: 4rem 0;
 }
 
-main section {
-    margin-bottom: 3rem;
-}
-
-main section h2 {
+main h2 {
     font-size: 1rem;
 }
 
-main section ul {
+main ul {
     padding: 0;
     list-style-type: none;
 }
 
-main section li {
+main li {
     margin-bottom: .5rem;
 }
 

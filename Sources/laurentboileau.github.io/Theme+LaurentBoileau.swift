@@ -125,10 +125,8 @@ private struct IndexItems<Site: Website>: Component {
     var body: Component {
         MainElement {
             Wrapper {
-                SectionElement {
-                    heading
-                    indexItems
-                }
+                heading
+                indexItems
             }
         }
     }
@@ -161,10 +159,8 @@ private struct SectionItems<Site: Website>: Component {
     var body: Component {
         MainElement {
             Wrapper {
-                SectionElement {
-                    heading
-                    sectionItems
-                }
+                heading
+                sectionItems
             }
         }
     }
