@@ -60,7 +60,7 @@ nav .separator {
     margin: 0 .75rem;
 }
 
-/* Header styles */
+/* Main header styles */
 
 #main-header .wrapper {
     padding: 100px 0;
@@ -151,15 +151,18 @@ main li {
     margin-bottom: 1em;
 }
 
-/* Colophon styles */
+/* Main footer styles */
 
-#colophon .wrapper {
-    border-top: 1px solid var(--separator-color);
-    padding-top: 2rem;
+#main-footer {
     font-size: .875rem;
 }
 
-#colophon nav {
+#main-footer .wrapper {
+    padding: 2rem 0;
+    border-top: 1px solid var(--separator-color);
+}
+
+#main-footer nav {
     margin-bottom: .5rem;
 }
 

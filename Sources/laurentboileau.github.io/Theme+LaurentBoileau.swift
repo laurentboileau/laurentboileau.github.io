@@ -200,7 +200,7 @@ private struct SiteFooter: Component {
                 siteInfo
             }
         }
-        .id("colophon")
+        .id("main-footer")
     }
 
     private var projects: Component {
