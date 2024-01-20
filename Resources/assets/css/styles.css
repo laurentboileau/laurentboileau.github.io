@@ -63,7 +63,7 @@ nav .separator {
 /* Main header styles */
 
 #main-header .wrapper {
-    padding: 100px 0;
+    padding: 40px 0;
     border-bottom: 1px dashed var(--color-separator);
 }
 
@@ -78,7 +78,7 @@ nav .separator {
 /* Main styles */
 
 main {
-    margin: 4rem 0;
+    margin: 50px 0;
 }
 
 main h2 {
@@ -152,12 +152,8 @@ main li {
 
 /* Main footer styles */
 
-#main-footer {
-    font-size: .875rem;
-}
-
 #main-footer .wrapper {
-    padding: 2rem 0;
+    padding: 50px 0 0;
     border-top: 1px solid var(--color-separator);
 }
 
