@@ -218,8 +218,6 @@ private struct SiteFooter: Component {
         Navigation {
             Link("GitHub", url: "https://github.com/laurentboileau")
             Separator()
-            Link("Glass", url: "https://glass.photo/laurentboileau")
-            Separator()
             Link("Mastodon", url: "https://mastodon.social/@laurentboileau")
                 .attribute(named: "rel", value: "me")
         }
