@@ -10,9 +10,9 @@
     
     /* Colors */
     --color-body: rgba(0, 0, 0, 0.75);
-    --color-body-background: #fff;
+    --color-body-background: white;
     --color-link: hsl(212, 100%, 50%);
-    --color-link-visited: hsl(250, 66%, 50%);
+    --color-link-visited: hsl(250, 30%, 50%);
     --color-post-date: rgba(0, 0, 0, 0.25);
     --color-separator: rgba(0, 0, 0, 0.25);
     --color-footer: rgba(0, 0, 0, 0.35);
@@ -26,8 +26,14 @@
 
 @media(prefers-color-scheme: dark) {
     :root {
-        --color-body: #efefef;
+        /* Colors */
+        --color-body: rgba(255, 255, 255, 1.0);
         --color-body-background: black;
+        --color-link: hsl(212, 100%, 60%);
+        --color-link-visited: hsl(250, 30%, 60%);
+        --color-post-date: rgba(255, 255, 255, 0.75);
+        --color-separator: rgba(255, 255, 255, 0.35);
+        --color-footer: rgba(255, 255, 255, 0.75);
     }
 }
 
