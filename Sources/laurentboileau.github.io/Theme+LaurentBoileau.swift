@@ -94,7 +94,7 @@ private struct SiteHeader<Site: Website>: Component {
                 learnMore
             }
         }
-        .id("main-header")
+        .id("site-header")
     }
     
     private var heading: Component {
@@ -200,7 +200,7 @@ private struct SiteFooter: Component {
                 siteInfo
             }
         }
-        .id("main-footer")
+        .id("site-footer")
     }
 
     private var projects: Component {

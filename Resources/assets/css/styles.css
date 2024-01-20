@@ -66,18 +66,18 @@ nav .separator {
     margin: 0 .75rem;
 }
 
-/* Main header styles */
+/* Site header styles */
 
-#main-header .wrapper {
+#site-header .wrapper {
     padding: 40px 0;
     border-bottom: 1px dashed var(--color-separator);
 }
 
-#main-header h1 a, #main-header h1 a:visited {
+#site-header h1 a, #site-header h1 a:visited {
     color: var(--color-body);
 }
 
-#main-header nav {
+#site-header nav {
     font-size: .875rem;
 }
 
@@ -156,14 +156,14 @@ main li {
     margin-bottom: 1em;
 }
 
-/* Main footer styles */
+/* Site footer styles */
 
-#main-footer .wrapper {
+#site-footer .wrapper {
     padding: 50px 0 0;
     border-top: 1px solid var(--color-separator);
 }
 
-#main-footer nav {
+#site-footer nav {
     margin-bottom: .5rem;
 }
 
