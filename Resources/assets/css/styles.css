@@ -19,7 +19,7 @@
 
     /* Typefaces */
     --typeface-body: -apple-system, 'Helvetica Neue', sans-serif;
-    --typeface-body-font-size: 16px;
+    --typeface-body-font-size: 12pt;
     --typeface-body-line-height: 1.6;
     --typeface-monospace: SFMono-Regular, Menlo, monospace;
 }
