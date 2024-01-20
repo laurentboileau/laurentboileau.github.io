@@ -17,7 +17,6 @@
     --link-visited-color: #007aff;
     --post-date-color: #aaa;
     --footer-color: #ababab;
-    --accent-color: #fff200;
     --separator-color: #ccc;
     --header-spacing: 100px;
     --inner-max-width: 600px;
@@ -27,7 +26,6 @@
     :root {
         --body-color: #efefef;
         --body-background-color: black;
-        --accent-color: #f95f39;
     }
 }
 
@@ -78,10 +76,6 @@ nav .separator {
 #main-header h1 a, #main-header h1 a:visited {
     color: var(--body-color);
     background-color: none;
-}
-
-#main-header h1 a:hover {
-    background-color: var(--accent-color);
 }
 
 #main-header nav {
