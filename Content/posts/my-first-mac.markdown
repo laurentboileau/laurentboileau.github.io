@@ -2,6 +2,7 @@
 title: My First Mac
 description: Celebrating 40 years of the Macintosh.
 date: 2024-01-24 00:00
+image: /assets/photos/my-first-mac-box.jpg
 ---
 
 In August 2006, at the age of 16, I purchased my first Mac during a summer job as a dishwasher. Thankfully, my parents agreed to help fund the purchase. Before that, I always had a PC at home due to my dad's work in computer distribution. My parents believed in developing my computer skills, and so I remember having a PC in my bedroom since kindergarten.
