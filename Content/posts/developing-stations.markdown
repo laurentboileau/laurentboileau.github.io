@@ -13,7 +13,7 @@ While I do have a decade of professional work experience, this is the first app 
 
 Shipping has never felt this satisfying.
 
-<img class="hero" src="/assets/photos/developing-stations.jpg" alt="Board of development tasks at the time of launch" title="Developing Stations" />
+<img class="hero" src="/assets/photos/developing-stations.jpg" alt="Development tasks at the time of launch" title="Developing Stations" />
 
 ### Business model
 
